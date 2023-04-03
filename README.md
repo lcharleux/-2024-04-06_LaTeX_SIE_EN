@@ -1,5 +1,5 @@
 # Introduction to LaTeX
-(SIE Doctorla school)
+(SIE Doctoral school)
 
 ## Introduction
 
