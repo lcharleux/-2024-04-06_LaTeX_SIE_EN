@@ -111,26 +111,26 @@ You can see a big panda on Fig. \ref{fig:panda} on page \pageref{fig:panda}.
 \subsection{Ugly and naive tabular}
 
 \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Animal} & \textbf{Size} & \textbf{Weight} \\
-    \hline
-    Rabbit          & Small         & $1$ kg          \\
-    \hline
-\end{tabular}
+\hline 
+\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
+\hline 
+Rabbit & Small & $1$ kg \\ 
+\hline 
+\end{tabular} 
 
 \subsection{Prettier tables with booktabs}
 
 %\usepackage{booktabs} % DON'T FORGET TO ADD THIS ON TOP
 
 \begin{tabular}{ccc}
-    \toprule
-    \textbf{Animal} & \textbf{Size} & \textbf{Weight} \\
-    \midrule
-    Rabbit          & Small         & $1$ kg          \\
-    Rabbit          & Small         & $1$ kg          \\
-    Rabbit          & Small         & $1$ kg          \\
-    Rabbit          & Small         & $1$ kg          \\
-    \bottomrule
+\toprule
+\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
+\midrule
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+\bottomrule
 \end{tabular}
 
 \subsection{Using Tablesgenerator}
@@ -143,34 +143,49 @@ Using \url{www.tablesgenerator.com}.
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 %\begin{table}[]
 \begin{tabular}{@{}ccc@{}}
-    \toprule
-    \cellcolor[HTML]{6665CD}Name                    & \cellcolor[HTML]{6665CD}Here                       & There                      \\ \midrule
-    \rowcolor[HTML]{6665CD}
-    \multicolumn{1}{|c|}{\cellcolor[HTML]{6665CD}1} & \multicolumn{2}{c|}{\cellcolor[HTML]{6665CD}08:15}                              \\ \midrule
-    \multicolumn{1}{|c|}{2}                         & \multicolumn{1}{c|}{13:30}                         & \multicolumn{1}{c|}{17:30} \\ \midrule
-    \multicolumn{1}{l}{2bis}                        & \multicolumn{1}{l}{14:30}                          & \multicolumn{1}{l}{18:30}  \\ \bottomrule
+\toprule
+\cellcolor[HTML]{6665CD}Name                    & \cellcolor[HTML]{6665CD}Here & There                      \\ \midrule
+\rowcolor[HTML]{6665CD} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{6665CD}1} & \multicolumn{2}{c|}{\cellcolor[HTML]{6665CD}08:15}        \\ \midrule
+\multicolumn{1}{|c|}{2}                         & \multicolumn{1}{c|}{13:30}   & \multicolumn{1}{c|}{17:30} \\ \midrule
+\multicolumn{1}{l}{2bis}                        & \multicolumn{1}{l}{14:30}    & \multicolumn{1}{l}{18:30}  \\ \bottomrule
 \end{tabular}
 %\end{table}
 
 \subsection{Table environment}
 
 The table environment make table floating objects and allows you to add a caption and a label to your tabular.
+\blindtext[3]
+I want my table to be here.
 
-\begin{table} % A FLOATING ENVIRONMENT FOR TABLES
-    \begin{center}
-        \begin{tabular}{ccc}
-            \toprule
-            \textbf{Animal} & \textbf{Size} & \textbf{Weight} \\
-            \midrule
-            Rabbit          & Small         & $1$ kg          \\
-            Rabbit          & Small         & $1$ kg          \\
-            Rabbit          & Small         & $1$ kg          \\
-            Rabbit          & Small         & $1$ kg          \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
-    \caption{A table with a legend.}
-    \label{tab:useless_table}
+\begin{table}[htb] % A FLOATING ENVIRONMENT FOR TABLES
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
+\midrule
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+\bottomrule
+\end{tabular}
+\end{center}
+\caption{A table with a legend.}
+\label{tab:useless_table}
 \end{table}
+
+
+\blindtext[3]
+
+\section{About bibliography}
+
+To use bibliography, you need to create a Bibtex file. 
+For example, I can cite \cite{hawking2010nature} and \cite{stromberg2014get}.
+
+\bibliography{biblio} % RELATIVE PATH TO THE BIB FILE
+\bibliographystyle{plain}
+
+
 
 \end{document}
