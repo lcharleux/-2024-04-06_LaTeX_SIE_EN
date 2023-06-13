@@ -1,0 +1,77 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{blindtext}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{My first \LaTeX~ document}
+\author{SIE doctoral school}
+%\date{June 2023}
+\date{\today}
+
+\begin{document}
+\maketitle % THIS COMMAND WILL CREATE THE TITLE
+
+\section{Introduction}
+
+In this article, we will  deal with basic stuff about \LaTeX.
+
+\tableofcontents
+
+
+
+\section{Basic stuff}
+
+You can use \% this way \& with the backslash \textbackslash.
+You can create a new \\ line.
+
+\vspace{2cm}
+
+Hello again !
+
+\section{Things about math}
+
+This is dumb text to create a paragraph.
+You can write inline math $\alpha = 36$.
+\blindtext[1]
+It is also possible  to do standalone math this way:
+
+$$
+    u(x) = \int_{t=0}^{+\infty} g_{ij}^2(t,x) dt
+$$
+
+\noindent With: % Here I don't want to have an indent
+
+\begin{enumerate}
+    \item Firstly: $g_{ij} = 5$
+    \item And also: $x \in \; ] 0, +\infty [$ % "\;" is a small space 
+\end{enumerate}
+
+\noindent You can use numbered equations like this very interresting Eq. \ref{eq:useless}.
+
+\begin{equation}
+    z = \sum_{n=0}^N v_n
+    \label{eq:useless} % this is the label of the equation.
+\end{equation}
+
+\begin{eqnarray}
+    a =  5 \nonumber \\ % THIS ONE WILL HAVE NO NUMBER
+    b = 12 \\
+    0 = 0
+\end{eqnarray}
+
+\begin{equation}
+    f(x) =
+    \left\lbrace
+    \begin{split}
+        x \mbox{ if : } x > 0 \\
+        0 \mbox { otherwise }
+    \end{split}
+    \right.
+\end{equation}
+
+
+\end{document}
