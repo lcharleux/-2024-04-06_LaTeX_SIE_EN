@@ -1,6 +1,12 @@
 \documentclass[11pt]{beamer}
 
-\usetheme{Warsaw}
+%\usetheme{Warsaw}
+%\usetheme{Antibes}
+%\usetheme{Szeged}
+%\usetheme{Szeged}
+\usetheme{Montpellier}
+
+\usecolortheme{orchid}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -11,7 +17,7 @@
 \author{SIE doctoral school}
 \title{An introduction to Beamer}
 %\setbeamercovered{transparent} 
-%\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
 \institute{Université Savoie Mont Blanc} 
 %\date{} 
@@ -64,7 +70,7 @@
 \end{frame}
 
 \subsection{Frames with columns}
-\begin{frame}
+\begin{frame}{Frames with columns}
     \begin{columns}[c] % c = Vertical centering
         \column{.6\textwidth}
         \includegraphics[width = 1.\textwidth]{../figures/panda_puppies}
@@ -84,6 +90,29 @@
         \end{alertblock}
     \end{columns}
 \end{frame}
+
+\section{Overlays}
+
+\subsection{Basic overlays}
+
+\begin{frame}{Overlays }
+
+    \begin{overprint}
+        \onslide<1> \includegraphics[width = .55\textwidth]{../figures/panda_puppies}
+        \onslide<2-> \includegraphics[width = .55\textwidth]{../figures/panda_puppies_v1}
+    \end{overprint}
+
+    \begin{alertblock}{An alertblock}
+        \begin{itemize}
+            \pause
+            \item Pandas are furry.
+                  \pause
+            \item And they are nice !
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+
 
 
 \end{document}
