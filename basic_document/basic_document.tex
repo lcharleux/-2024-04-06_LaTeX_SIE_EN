@@ -18,6 +18,8 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{graphicx} % a package to show images
 
+\usepackage{booktabs}
+
 \title{My first \LaTeX~ document}
 \author{SIE doctoral school}
 %\date{June 2023}
@@ -101,5 +103,32 @@ You can see a big panda on Fig. \ref{fig:panda} on page \pageref{fig:panda}.
     \caption{\blindtext[1]}
     \label{fig:panda}
 \end{figure}
+
+\section{Tabulars and tables}
+
+\subsection{Ugly and naive tabular}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
+\hline 
+Rabbit & Small & $1$ kg \\ 
+\hline 
+\end{tabular} 
+
+\subsection{Prettier tables with \textit{booktabs}}
+
+%\usepackage{booktabs} % DON'T FORGET TO ADD THIS ON TOP
+
+\begin{tabular}{ccc}
+\toprule
+\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
+\midrule
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+Rabbit & Small & $1$ kg \\ 
+\bottomrule
+\end{tabular}
 
 \end{document}
