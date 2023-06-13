@@ -19,6 +19,8 @@
 \usepackage{graphicx} % a package to show images
 
 \usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+
 
 \title{My first \LaTeX~ document}
 \author{SIE doctoral school}
@@ -109,26 +111,45 @@ You can see a big panda on Fig. \ref{fig:panda} on page \pageref{fig:panda}.
 \subsection{Ugly and naive tabular}
 
 \begin{tabular}{|c|c|c|}
-\hline 
-\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
-\hline 
-Rabbit & Small & $1$ kg \\ 
-\hline 
-\end{tabular} 
+    \hline
+    \textbf{Animal} & \textbf{Size} & \textbf{Weight} \\
+    \hline
+    Rabbit          & Small         & $1$ kg          \\
+    \hline
+\end{tabular}
 
-\subsection{Prettier tables with \textit{booktabs}}
+\subsection{Prettier tables with booktabs}
 
 %\usepackage{booktabs} % DON'T FORGET TO ADD THIS ON TOP
 
 \begin{tabular}{ccc}
-\toprule
-\textbf{Animal} & \textbf{Size} & \textbf{Weight} \\ 
-\midrule
-Rabbit & Small & $1$ kg \\ 
-Rabbit & Small & $1$ kg \\ 
-Rabbit & Small & $1$ kg \\ 
-Rabbit & Small & $1$ kg \\ 
-\bottomrule
+    \toprule
+    \textbf{Animal} & \textbf{Size} & \textbf{Weight} \\
+    \midrule
+    Rabbit          & Small         & $1$ kg          \\
+    Rabbit          & Small         & $1$ kg          \\
+    Rabbit          & Small         & $1$ kg          \\
+    Rabbit          & Small         & $1$ kg          \\
+    \bottomrule
 \end{tabular}
+
+\subsection{Using Tablesgenerator}
+
+Using \url{www.tablesgenerator.com}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+%\begin{table}[]
+\begin{tabular}{@{}ccc@{}}
+    \toprule
+    \cellcolor[HTML]{6665CD}Name                    & \cellcolor[HTML]{6665CD}Here                       & There                      \\ \midrule
+    \rowcolor[HTML]{6665CD}
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{6665CD}1} & \multicolumn{2}{c|}{\cellcolor[HTML]{6665CD}08:15}                              \\ \midrule
+    \multicolumn{1}{|c|}{2}                         & \multicolumn{1}{c|}{13:30}                         & \multicolumn{1}{c|}{17:30} \\ \midrule
+    \multicolumn{1}{l}{2bis}                        & \multicolumn{1}{l}{14:30}                          & \multicolumn{1}{l}{18:30}  \\ \bottomrule
+\end{tabular}
+%\end{table}
 
 \end{document}
