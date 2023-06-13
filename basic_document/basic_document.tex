@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{blindtext}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx} % a package to show images
 
 \title{My first \LaTeX~ document}
 \author{SIE doctoral school}
@@ -73,5 +74,22 @@ $$
     \right.
 \end{equation}
 
+\section{About figures and plots}
+
+\blindtext[1]
+We can include graphics inside
+\includegraphics[width = 5mm]{figures/awesome_panda.jpeg}
+the text even if it is a bade idea in many cases.
+\blindtext[1]
+You can see a big panda on Fig. \ref{fig:panda} on page \pageref{fig:panda}.
+
+%\includegraphics[width = 5cm]{figures/awesome_panda.jpeg}
+\begin{figure}
+    \begin{center}
+        \includegraphics[width = .5\textwidth]{figures/awesome_panda.jpeg}
+    \end{center}
+    \caption{\blindtext[1]}
+    \label{fig:panda}
+\end{figure}
 
 \end{document}
