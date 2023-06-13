@@ -31,8 +31,59 @@
 
 \section{Basic frames}
 
-\begin{frame}{A frame}
 
+\subsection{Blocks}
+
+% FRAME 1
+\begin{frame}{Blocks (1/2)}
+    \begin{center}
+        \includegraphics[width = .55\textwidth]{../figures/panda_puppies}
+    \end{center}
+
+    \begin{block}{A standard block}
+        \begin{itemize}
+            \item Some data.
+            \item Some other data.
+        \end{itemize}
+    \end{block}
 \end{frame}
+
+
+% FRAME 2
+\begin{frame}{Blocks (2/2)}
+    \begin{center}
+        \includegraphics[width = .55\textwidth]{../figures/panda_puppies}
+    \end{center}
+
+    \begin{alertblock}{An alertblock}
+        \begin{itemize}
+            \item Some data.
+            \item Some other data.
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+\subsection{Frames with columns}
+\begin{frame}
+    \begin{columns}[c] % c = Vertical centering
+        \column{.6\textwidth}
+        \includegraphics[width = 1.\textwidth]{../figures/panda_puppies}
+        \column{.4\textwidth}
+        \begin{block}{A standard block}
+            \begin{itemize}
+                \item Some data.
+                \item Some other data.
+            \end{itemize}
+        \end{block}
+
+        \begin{alertblock}{An alertblock}
+            \begin{itemize}
+                \item Some data.
+                \item Some other data.
+            \end{itemize}
+        \end{alertblock}
+    \end{columns}
+\end{frame}
+
 
 \end{document}
